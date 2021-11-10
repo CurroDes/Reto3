@@ -1,0 +1,48 @@
+package RetoDia3;
+
+import java.util.Scanner;
+
+public class Reto1 {
+    //El reto de hoy consiste en lo siguiente:
+    //- Lenguaje: Java
+    //- IDE recomendado: IntelliJ
+    //- Nivel: Inicial- Enunciado: Dada una cadena de texto (String) con el nombre completo de una persona, debes crear un método que devuelva 3 campos: nombre, apellido1, apellido2. Debes tener en cuenta que hay nombres compuestos y que puedes recibir un nombre completo sin apellido2 o sin ningún apellido.
+    //Ejemplos: José Martínez Pérez -> nombre: José, apellido1: Martínez, apellido2: Pérez.
+    //                   José María Martínez -> nombre: José María, apellido1: Martínez
+    //                   José -> nombre: José
+    //- Consideraciones: Deberías tener los nombres de pila en un array o fichero, para poder diferenciar entre un nombre de pila y un apellido.
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nombre");
+        String nombre = sc.nextLine();
+        System.out.println("Apellido1");
+        String apellido = sc.nextLine();
+        System.out.println("Apellido2");
+        String apellido2 = sc.nextLine();
+
+        System.out.println("Nombre completo:"+nombre+" "+apellido+" "+apellido2);
+        System.out.println("Nombre sin apellido2:" +nombre+" "+apellido);
+        System.out.println("Sin apellidos:" +nombre);
+
+
+
+        String [] reto = {nombre , apellido , apellido2};
+        String nombreCompleto = "";
+        for (int i= 0; i<reto.length; ++i){
+
+
+         nombreCompleto += reto[i]+" ";
+
+
+
+        }
+        
+        System.out.println(nombreCompleto);
+
+
+
+  }
+
+}
